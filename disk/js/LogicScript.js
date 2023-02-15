@@ -1,6 +1,6 @@
 /* ========================= HOME PAGE ========================= */
 /* Toggle Navbar Menu */
-const body = document.getElementById("body");
+const body = document.getElementById("body-home");
 const navLinks = document.getElementById("navLinks");
 const burgerButton = document.getElementById("burgerButton");
 const toggleBurgerButton = () => {

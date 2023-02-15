@@ -1,6 +1,14 @@
 /* --------------------------- ++ BASE ++ --------------------------- */
 @use "./config" as con;
 
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("SFProText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 li {
   list-style: none;
 }
@@ -15,8 +23,6 @@ ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  //   font-family: "TTNormsRegular";
-  //   color: var.$primary-text-color;
 }
 
 a,
@@ -29,16 +35,6 @@ a:active {
 a {
   text-decoration: none;
 }
-
-// button {
-//   background-color: var.$primary-theme-bold-color;
-//   color: white;
-//   border: none;
-//   border-radius: 62.5rem;
-//   font-size: 1rem;
-//   font-family: "TTNormsBold";
-//   line-height: 18.4px;
-// }
 
 textarea,
 select,
@@ -173,7 +169,6 @@ h2 {
 
 /* --- Hero Home--- */
 .hero-home {
-  // border: 1px solid green;
   max-width: con.$primary-max-width;
   margin: 0 auto;
   display: flex;
@@ -224,12 +219,8 @@ h2 {
 
 /* Articles - Home */
 main {
-  // border: 1px solid blue;
-
   .articles-section {
-    // max-width: con.$secondary-max-width;
     width: fit-content;
-    // border: 1px solid green;
     margin: 64px auto;
 
     h2 {
@@ -241,7 +232,6 @@ main {
       grid-template-columns: repeat(2, 1fr);
       gap: 28px;
       padding: 0 20px;
-      // background-color: red;
 
       .article {
         display: flex;
@@ -249,21 +239,12 @@ main {
         align-items: center;
         gap: 20px;
         margin-bottom: 28px;
-        // width: fit-content;
 
         a {
           display: flex;
           flex-direction: column;
           align-items: center;
           gap: 20px;
-          // padding: 0 20px;
-
-          // font-family: "SF Pro Display", sans-serif;
-          // font-weight: 500;
-          // font-size: 22px;
-          // line-height: 120%;
-          // text-align: center;
-          // max-width: 262px;
 
           p {
             font-family: "SF Pro Display", sans-serif;
@@ -279,16 +260,110 @@ main {
   }
 }
 
-/* ------------------------- ++ RESPONSIVE ++ -------------------------- */
-// @media (max-width: 1024px) {
+/* Footer - Home */
+.footer-home {
+  background-color: con.$primary-dark-color;
+  max-width: con.$primary-max-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 105.12px;
+  padding: 18px 0 32px 0;
+  overflow: hidden;
 
+  &__abilities {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    /* width increased to 101% to create overflow hidden effect */
+    width: 101%;
+
+    li {
+      flex-shrink: 0;
+      font-family: "SF Pro Text";
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: con.$primary-white-color;
+      white-space: nowrap;
+
+      &:nth-child(odd) {
+        font-weight: 800 !important;
+      }
+    }
+  }
+
+  &__contact {
+    // border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+
+    .footer-logo {
+      margin-bottom: 25.58px;
+    }
+
+    .footer-intro {
+      max-width: 488px;
+      text-align: center;
+      font-family: "New York Small";
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: con.$primary-white-color;
+      margin-bottom: 32px;
+    }
+
+    .footer-social-network {
+      display: flex;
+      gap: 29px;
+      margin-bottom: 64px;
+
+      li {
+        a {
+          color: con.$primary-white-color;
+          text-decoration: underline;
+          font-family: "SF Pro Text";
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 170%;
+        }
+      }
+    }
+
+    .footer-copyright {
+      color: con.$primary-white-color;
+      font-family: "SF Pro Text";
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 140%;
+      text-align: center;
+      max-width: 178px;
+    }
+  }
+}
+
+/* ------------------------- ++ RESPONSIVE ++ -------------------------- */
+// @media (max-width: 1440px) {
+//   .footer-home {
+//     background-color: red;
+//     // max-width: 100% !important;
+//     &__abilities {
+//       background-color: green;
+//       display: grid;
+//       grid-template-columns: repeat(6, 1fr);
+//     }
+//   }
 // }
 
 @media (max-width: 1024px) {
   /*  ======================= HOME PAGE MOBILE ======================== */
   /* --- Header-Home --- */
   .header-home {
-    // border: 1px solid green;
     .header-container {
       position: relative; /* for .navbar-links positon */
       padding: 24px 20px 21px;
@@ -335,7 +410,6 @@ main {
           padding: 10px 20px;
           box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
           transition: all 150ms cubic-bezier(0.25, 0.5, 0.75, 1);
-          // overflow-y: hidden !important;
         }
       }
     }
@@ -378,6 +452,31 @@ main {
 
       &::after {
         width: 100%;
+      }
+    }
+  }
+
+  /* --- Footer-Home --- */
+  .footer-home {
+    gap: 103.41px;
+
+    &__contact {
+      .footer-logo {
+        img {
+          max-width: 236.27px;
+        }
+      }
+      .footer-intro {
+        max-width: 248px;
+        font-size: 13px;
+      }
+
+      .footer-social-network {
+        li {
+          a {
+            font-size: 13px;
+          }
+        }
       }
     }
   }

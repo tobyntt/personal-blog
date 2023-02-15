@@ -1,4 +1,11 @@
 /* --------------------------- ++ BASE ++ --------------------------- */
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("SFProText-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 li {
   list-style: none;
 }
@@ -266,6 +273,102 @@ main .articles-section .articles-container .article a p {
   max-width: 262px;
 }
 
+/* Footer - Home */
+.footer-home {
+  background-color: #000000;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 105.12px;
+  padding: 18px 0 32px 0;
+  overflow: hidden;
+}
+.footer-home__abilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 18px;
+  /* width increased to 101% to create overflow hidden effect */
+  width: 101%;
+}
+.footer-home__abilities li {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.footer-home__abilities li:nth-child(odd) {
+  font-weight: 800 !important;
+}
+.footer-home__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+.footer-home__contact .footer-logo {
+  margin-bottom: 25.58px;
+}
+.footer-home__contact .footer-intro {
+  max-width: 488px;
+  text-align: center;
+  font-family: "New York Small";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+.footer-home__contact .footer-social-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 29px;
+  margin-bottom: 64px;
+}
+.footer-home__contact .footer-social-network li a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-family: "SF Pro Text";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 170%;
+}
+.footer-home__contact .footer-copyright {
+  color: #ffffff;
+  font-family: "SF Pro Text";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  text-align: center;
+  max-width: 178px;
+}
+
 /* ------------------------- ++ RESPONSIVE ++ -------------------------- */
 @media (max-width: 1024px) {
   /*  ======================= HOME PAGE MOBILE ======================== */
@@ -347,5 +450,20 @@ main .articles-section .articles-container .article a p {
   }
   .hero-home .hero-home-container::after {
     width: 100%;
+  }
+
+  /* --- Footer-Home --- */
+  .footer-home {
+    gap: 103.41px;
+  }
+  .footer-home__contact .footer-logo img {
+    max-width: 236.27px;
+  }
+  .footer-home__contact .footer-intro {
+    max-width: 248px;
+    font-size: 13px;
+  }
+  .footer-home__contact .footer-social-network li a {
+    font-size: 13px;
   }
 }
