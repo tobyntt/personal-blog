@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "SF Pro Text";
-  src: url("SFProText-Regular.ttf") format("truetype");
+  src: url("../fonts/SFProText-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -59,12 +59,6 @@ h2 {
 
 /*  ============================= HOME PAGE ============================= */
 /* --- Header --- */
-
-.disable-vertical-scrollbar {
-  /* disable vertical scroll bar when the mobile menu is open - for body */
-  overflow-y: hidden;
-}
-
 .header-home {
   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
   max-width: con.$primary-max-width;
@@ -282,16 +276,16 @@ main {
     li {
       flex-shrink: 0;
       font-family: "SF Pro Text";
-      font-weight: 400;
       font-size: 20px;
       line-height: 28px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: con.$primary-white-color;
+      /* can't find different weight of font SF Pro Text so I use text color with opacity 0.75 to do the highlighted trick*/
+      color: rgba(255, 255, 255, 0.7);
       white-space: nowrap;
 
       &:nth-child(odd) {
-        font-weight: 800 !important;
+        color: con.$primary-white-color;
       }
     }
   }

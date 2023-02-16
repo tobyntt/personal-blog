@@ -1,7 +1,7 @@
 /* --------------------------- ++ BASE ++ --------------------------- */
 @font-face {
   font-family: "SF Pro Text";
-  src: url("SFProText-Regular.ttf") format("truetype");
+  src: url("../fonts/SFProText-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -57,11 +57,6 @@ h2 {
 
 /*  ============================= HOME PAGE ============================= */
 /* --- Header --- */
-.disable-vertical-scrollbar {
-  /* disable vertical scroll bar when the mobile menu is open - for body */
-  overflow-y: hidden;
-}
-
 .header-home {
   -webkit-box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
@@ -307,16 +302,16 @@ main .articles-section .articles-container .article a p {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   font-family: "SF Pro Text";
-  font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #ffffff;
+  /* can't find different weight of font SF Pro Text so I use text color with opacity 0.75 to do the highlighted trick*/
+  color: rgba(255, 255, 255, 0.7);
   white-space: nowrap;
 }
 .footer-home__abilities li:nth-child(odd) {
-  font-weight: 800 !important;
+  color: #ffffff;
 }
 .footer-home__contact {
   display: -webkit-box;
