@@ -31,7 +31,7 @@ document.onclick = (e) => {
 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* ========================= ARTICLE PAGE ========================= */
-/* use flex-box order to re-arrange hero element: title, intro, image */
+/* use css order to re-arrange hero elements: title, intro, image */
 const heroContainer = document.getElementById("hero-container");
 if (heroContainer.classList.contains("hero-article-container")) {
   heroContainer.childNodes[5].style.order = "1";

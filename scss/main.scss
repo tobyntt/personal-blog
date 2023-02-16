@@ -1,10 +1,20 @@
 /* --------------------------- ++ BASE ++ --------------------------- */
 @use "./config" as con;
+/* import article scss files */
+@use "./article";
 
 @font-face {
   font-family: "SF Pro Text";
   src: url("../fonts/SFProText-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "New York Medium";
+  src: url("../fonts/NewYorkMedium-Regular.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -201,7 +211,7 @@ h2 {
     /* the black underline of the hero box */
     &::after {
       content: "";
-      width: 80%;
+      width: 75%;
       height: 2px;
       background-color: con.$primary-dark-color;
       margin: 0 auto;

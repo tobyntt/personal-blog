@@ -1,0 +1,124 @@
+@use "./config" as con;
+
+main {
+  margin: 2rem 0; /* this will be removed */
+
+  .main-article {
+    // border: 1px solid blue;
+    max-width: con.$medium-max-width;
+    margin: 0 auto;
+
+    &__author {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .author-date-posted {
+        //   border: 1px solid red;
+        display: flex;
+        gap: 16px;
+
+        & > a {
+          border-radius: 50%;
+          width: 57px;
+          aspect-ratio: 1 / 1;
+          overflow: hidden;
+
+          &:hover {
+            box-shadow: 0px 1px 8px con.$primary-theme-color;
+          }
+
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        //   img {
+        //     background-color: blue;
+        //   }
+
+        .name-date-posted {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 8px;
+
+          a {
+            h3 {
+              text-transform: uppercase;
+              font-family: "SF Pro Text";
+              font-size: 16px;
+              line-height: 19px;
+              letter-spacing: 0.05em;
+
+              &:hover {
+                text-decoration: underline;
+                text-decoration-color: con.$primary-theme-color;
+              }
+            }
+          }
+
+          p {
+            font-family: "SF Pro Text";
+            font-style: normal;
+            font-size: 16px;
+            line-height: 19px;
+            color: #6b6b6b;
+          }
+        }
+      }
+
+      .social-network {
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 44px;
+
+        border: 1px solid #eaeaea;
+        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        overflow: hidden;
+
+        a {
+          padding: 12.04px 25px;
+          height: 100%;
+
+          &:first-child {
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+          }
+
+          &:last-child {
+            border-left: 1px solid rgba(0, 0, 0, 0.08);
+            display: none;
+          }
+
+          &:hover {
+            background-color: con.$primary-theme-color;
+            transition: all 250ms ease;
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: -1px;
+          }
+        }
+      }
+    }
+
+    &__content {
+      border: 1px solid green;
+
+      p {
+        font-family: "New York Medium";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 170%;
+      }
+    }
+  }
+}

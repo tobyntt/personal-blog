@@ -1,8 +1,139 @@
+main {
+  margin: 2rem 0;
+  /* this will be removed */
+}
+main .main-article {
+  max-width: 640px;
+  margin: 0 auto;
+}
+main .main-article__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .main-article__author .author-date-posted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+main .main-article__author .author-date-posted > a {
+  border-radius: 50%;
+  width: 57px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+main .main-article__author .author-date-posted > a:hover {
+  -webkit-box-shadow: 0px 1px 8px rgb(246, 217, 2);
+          box-shadow: 0px 1px 8px rgb(246, 217, 2);
+}
+main .main-article__author .author-date-posted > a img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .main-article__author .author-date-posted .name-date-posted {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+main .main-article__author .author-date-posted .name-date-posted a h3 {
+  text-transform: uppercase;
+  font-family: "SF Pro Text";
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+}
+main .main-article__author .author-date-posted .name-date-posted a h3:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgb(246, 217, 2);
+          text-decoration-color: rgb(246, 217, 2);
+}
+main .main-article__author .author-date-posted .name-date-posted p {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #6b6b6b;
+}
+main .main-article__author .social-network {
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 44px;
+  border: 1px solid #eaeaea;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+main .main-article__author .social-network a {
+  padding: 12.04px 25px;
+  height: 100%;
+}
+main .main-article__author .social-network a:first-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+main .main-article__author .social-network a:last-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  display: none;
+}
+main .main-article__author .social-network a:hover {
+  background-color: rgb(246, 217, 2);
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+main .main-article__author .social-network a img {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -1px;
+}
+main .main-article__content {
+  border: 1px solid green;
+}
+main .main-article__content p {
+  font-family: "New York Medium";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 170%;
+}
+
 /* --------------------------- ++ BASE ++ --------------------------- */
+/* import article scss files */
 @font-face {
   font-family: "SF Pro Text";
   src: url("../fonts/SFProText-Regular.ttf") format("truetype");
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "New York Medium";
+  src: url("../fonts/NewYorkMedium-Regular.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -206,7 +337,7 @@ h2 {
 }
 .hero-home .hero-home-container::after {
   content: "";
-  width: 80%;
+  width: 75%;
   height: 2px;
   background-color: #000000;
   margin: 0 auto;
