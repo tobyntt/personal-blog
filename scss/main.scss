@@ -335,6 +335,12 @@ main {
           font-weight: 500;
           font-size: 16px;
           line-height: 170%;
+
+          &:hover {
+            background-color: con.$primary-theme-color;
+            // color: con.$primary-theme-color;
+            // text-decoration-color: con.$primary-theme-color;
+          }
         }
       }
     }

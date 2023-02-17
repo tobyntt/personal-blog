@@ -3,8 +3,8 @@ main {
   /* this will be removed */
 }
 main .main-article {
-  max-width: 640px;
   margin: 0 auto;
+  /* Author name and date posted */
 }
 main .main-article__author {
   display: -webkit-box;
@@ -16,6 +16,9 @@ main .main-article__author {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 52px;
+  max-width: 640px;
+  margin: 0 auto;
 }
 main .main-article__author .author-date-posted {
   display: -webkit-box;
@@ -111,7 +114,18 @@ main .main-article__author .social-network a img {
   top: -1px;
 }
 main .main-article__content {
-  border: 1px solid green;
+  border: 1px solid blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 36px;
 }
 main .main-article__content p {
   font-family: "New York Medium";
@@ -119,6 +133,54 @@ main .main-article__content p {
   font-weight: 400;
   font-size: 20px;
   line-height: 170%;
+  max-width: 640px;
+}
+main .main-article__content h3 {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-size: 32px;
+  line-height: 160%;
+}
+main .main-article__content .article-image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+main .main-article__content ul {
+  list-style-type: disc;
+}
+main .main-article__content ul li .list-item-container {
+  position: relative;
+  padding-left: 20px;
+  font-family: "New York Medium";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 170%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .main-article__content ul li .list-item-container::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #000000;
+  rotate: 45deg;
+  position: absolute;
+  margin: auto 0;
+  left: 0;
+}
+main .main-article__content ul li .second-list-item::before {
+  top: 14px;
 }
 
 /* --------------------------- ++ BASE ++ --------------------------- */
@@ -484,6 +546,9 @@ main .articles-section .articles-container .article a p {
   font-weight: 500;
   font-size: 16px;
   line-height: 170%;
+}
+.footer-home__contact .footer-social-network li a:hover {
+  background-color: rgb(246, 217, 2);
 }
 .footer-home__contact .footer-copyright {
   color: #ffffff;

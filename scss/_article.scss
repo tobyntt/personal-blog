@@ -5,16 +5,23 @@ main {
 
   .main-article {
     // border: 1px solid blue;
-    max-width: con.$medium-max-width;
+    // max-width: con.$secondary-max-width;
     margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
 
+    /* Author name and date posted */
     &__author {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 52px; // will check this code later
+      max-width: con.$medium-max-width;
+      margin: 0 auto;
 
       .author-date-posted {
-        //   border: 1px solid red;
         display: flex;
         gap: 16px;
 
@@ -110,7 +117,11 @@ main {
     }
 
     &__content {
-      border: 1px solid green;
+      border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
 
       p {
         font-family: "New York Medium";
@@ -118,6 +129,60 @@ main {
         font-weight: 400;
         font-size: 20px;
         line-height: 170%;
+        max-width: con.$medium-max-width;
+      }
+
+      h3 {
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-size: 32px;
+        line-height: 160%;
+      }
+
+      .article-image-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+
+        // img {
+        //   width: 140%;
+        // }
+      }
+
+      ul {
+        list-style-type: disc;
+
+        li {
+          .list-item-container {
+            position: relative;
+            padding-left: 20px;
+
+            font-family: "New York Medium";
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 170%;
+            display: flex;
+            align-items: center;
+
+            &::before {
+              content: "";
+              width: 6px;
+              height: 6px;
+              background-color: con.$primary-dark-color;
+              rotate: 45deg;
+              position: absolute;
+              margin: auto 0;
+              left: 0;
+            }
+          }
+
+          .second-list-item {
+            &::before {
+              top: 14px;
+            }
+          }
+        }
       }
     }
   }
