@@ -338,8 +338,6 @@ main {
 
           &:hover {
             background-color: con.$primary-theme-color;
-            // color: con.$primary-theme-color;
-            // text-decoration-color: con.$primary-theme-color;
           }
         }
       }
@@ -420,6 +418,7 @@ main {
           padding: 10px 20px;
           box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
           transition: all 150ms cubic-bezier(0.25, 0.5, 0.75, 1);
+          border-top: 1px solid con.$primary-theme-color;
         }
       }
     }

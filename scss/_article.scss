@@ -1,25 +1,19 @@
 @use "./config" as con;
 
 main {
-  margin: 2rem 0; /* this will be removed */
+  // margin: 2rem 0; /* this will be removed */
 
   .main-article {
-    // border: 1px solid blue;
-    // max-width: con.$secondary-max-width;
-    margin: 0 auto;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
+    // padding-bottom: 104.18px;
+    padding: 24px 0 104.18px 0;
 
-    /* Author name and date posted */
+    /* Author and Artitle's posted date */
     &__author {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 52px; // will check this code later
       max-width: con.$medium-max-width;
-      margin: 0 auto;
+      margin: 0 auto 52px auto;
 
       .author-date-posted {
         display: flex;
@@ -40,10 +34,6 @@ main {
             object-fit: cover;
           }
         }
-
-        //   img {
-        //     background-color: blue;
-        //   }
 
         .name-date-posted {
           display: flex;
@@ -71,7 +61,7 @@ main {
             font-style: normal;
             font-size: 16px;
             line-height: 19px;
-            color: #6b6b6b;
+            color: #6c6c6c;
           }
         }
       }
@@ -116,42 +106,67 @@ main {
       }
     }
 
+    /* Article Content*/
     &__content {
-      border: 1px solid blue;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 36px;
 
-      p {
-        font-family: "New York Medium";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 170%;
+      .text-content-container {
         max-width: con.$medium-max-width;
+        display: flex;
+        flex-direction: column;
+        gap: 52px;
+
+        p {
+          font-family: "New York Medium";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 170%;
+        }
+
+        h3 {
+          font-family: "SF Pro Display";
+          font-style: normal;
+          font-size: 32px;
+          line-height: 160%;
+          margin-top: 20px;
+        }
       }
 
-      h3 {
-        font-family: "SF Pro Display";
-        font-style: normal;
-        font-size: 32px;
-        line-height: 160%;
-      }
-
+      /* Article Image */
       .article-image-container {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        margin: 0 auto;
+        align-items: center;
+        gap: 12px;
+        max-width: con.$secondary-max-width;
+        margin: 40px 0;
 
-        // img {
-        //   width: 140%;
-        // }
+        &__image {
+          width: 100%;
+        }
+
+        &__image-info {
+          font-family: "SF Pro Text";
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 140%;
+          max-width: 482px;
+          text-align: center;
+        }
       }
 
       ul {
         list-style-type: disc;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        p {
+          padding-bottom: 18px;
+        }
 
         li {
           .list-item-container {
@@ -181,6 +196,266 @@ main {
             &::before {
               top: 14px;
             }
+          }
+        }
+      }
+
+      /* Social Media Sharing */
+      .social-media-sharing {
+        min-width: con.$medium-max-width;
+        margin: 76px 0 32px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+          font-family: "SF Pro Text";
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          letter-spacing: 0.03em;
+          display: none;
+        }
+
+        .networks-sharing-links {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          height: 64px;
+
+          border: 1px solid #eaeaea;
+          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.08);
+          border-radius: 4px;
+          overflow: hidden;
+
+          a {
+            padding: 12.04px 25px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+
+            /* these 2 lines below make the flex box elements with different size content has the exact same width */
+            width: 0;
+            flex-grow: 1;
+
+            &:first-child {
+              border-right: 1px solid rgba(0, 0, 0, 0.08);
+            }
+
+            &:last-child {
+              border-left: 1px solid rgba(0, 0, 0, 0.08);
+              display: none;
+            }
+
+            &:hover {
+              background-color: con.$primary-theme-color;
+              transition: all 250ms ease;
+            }
+
+            img {
+              width: 22px;
+              height: 22px;
+            }
+
+            span {
+              font-family: "SF Pro Text";
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 160%;
+            }
+          }
+        }
+      }
+
+      /* Tags */
+      .tags {
+        border-bottom: 1px dotted #6c6c6c;
+        min-width: con.$medium-max-width;
+
+        p {
+          font-family: "SF Pro Text";
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.03em;
+          margin-bottom: 34px;
+
+          a {
+            text-decoration: underline;
+
+            &:hover {
+              text-decoration-color: con.$primary-theme-color;
+            }
+          }
+        }
+      }
+    }
+
+    /* Author Background */
+    &__author-background {
+      max-width: con.$medium-max-width;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin: 34px auto 0 auto;
+
+      .image-container {
+        border-radius: 50%;
+        overflow: hidden;
+        min-width: 71.25px;
+        aspect-ratio: 1 / 1;
+
+        a {
+          &:hover {
+            box-shadow: 0px 1px 8px con.$primary-theme-color;
+          }
+
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0px 1px 8px con.$primary-theme-color;
+        }
+      }
+
+      p {
+        font-family: "SF Pro Text";
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        color: #6c6c6c;
+
+        span {
+          text-transform: uppercase;
+          color: con.$primary-dark-color;
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------- ++ RESPONSIVE ++ -------------------------- */
+/* */
+@media (max-width: 640px) {
+  main {
+    .main-article {
+      /* Author Information*/
+      &__author {
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+
+        .author-date-posted {
+          .name-date-posted {
+            a {
+              h3 {
+                font-size: 13px;
+              }
+            }
+
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+
+        .social-network {
+          width: 100%;
+
+          a {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+
+            &:last-child {
+              display: initial;
+              display: flex;
+              justify-content: center;
+              border-left: 1px solid rgba(0, 0, 0, 0.08);
+            }
+          }
+        }
+      }
+
+      /* Article Content*/
+      &__content {
+        .text-content-container {
+          padding: 0 20px;
+          gap: 42px;
+
+          p {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              .list-item-container {
+                font-size: 16px;
+              }
+            }
+          }
+
+          h3 {
+            margin-top: 10px;
+            font-size: 26px;
+          }
+        }
+
+        /* Social Media Sharing */
+        .social-media-sharing {
+          min-width: 100% !important;
+          padding: 0 20px;
+          margin-top: 52px;
+
+          p {
+            display: initial;
+          }
+
+          a {
+            &:last-child {
+              display: flex !important;
+            }
+
+            span {
+              display: none;
+            }
+          }
+        }
+
+        .tags {
+          min-width: 100% !important;
+          padding: 0 20px;
+        }
+      }
+
+      /* Author's background */
+      &__author-background {
+        padding: 0 20px;
+        flex-direction: column;
+
+        .image-container {
+          background-color: red;
+
+          a {
+            img {
+              object-fit: cover;
+              width: 100%;
+            }
+          }
+        }
+
+        .name-background {
+          p {
+            text-align: center;
+            font-size: 14px;
           }
         }
       }
