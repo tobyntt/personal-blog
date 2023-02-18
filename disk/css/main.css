@@ -1162,6 +1162,10 @@ main .articles-section .articles-container .article:hover::after {
   .articles-section {
     width: 100% !important;
   }
+  .articles-section h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
   .articles-section .articles-container {
     -ms-grid-columns: 1fr !important;
     grid-template-columns: 1fr !important;
