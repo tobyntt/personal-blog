@@ -1112,7 +1112,6 @@ main .articles-section .articles-container .article:hover::after {
 
 /* ------------------------- ++ RESPONSIVE ++ -------------------------- */
 @media (max-width: 1024px) {
-  /*  ======================= HOME PAGE MOBILE ======================== */
   /* --- Header-Home --- */
   .header-home .header-container {
     position: relative;
@@ -1159,7 +1158,6 @@ main .articles-section .articles-container .article:hover::after {
   }
 }
 @media (max-width: 682px) {
-  /*  ======================= HOME PAGE MOBILE ======================== */
   /* Articles - Home */
   .articles-section {
     width: 100% !important;
@@ -1174,7 +1172,6 @@ main .articles-section .articles-container .article:hover::after {
   }
 }
 @media (max-width: 375px) {
-  /*  ======================= HOME PAGE MOBILE ======================== */
   /* --- Hero-Home --- */
   .hero-home {
     padding-top: 52px;

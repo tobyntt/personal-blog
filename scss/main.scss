@@ -383,20 +383,7 @@ main {
 }
 
 /* ------------------------- ++ RESPONSIVE ++ -------------------------- */
-// @media (max-width: 1440px) {
-//   .footer-home {
-//     background-color: red;
-//     // max-width: 100% !important;
-//     &__abilities {
-//       background-color: green;
-//       display: grid;
-//       grid-template-columns: repeat(6, 1fr);
-//     }
-//   }
-// }
-
 @media (max-width: 1024px) {
-  /*  ======================= HOME PAGE MOBILE ======================== */
   /* --- Header-Home --- */
   .header-home {
     .header-container {
@@ -453,7 +440,6 @@ main {
 }
 
 @media (max-width: 682px) {
-  /*  ======================= HOME PAGE MOBILE ======================== */
   /* Articles - Home */
   .articles-section {
     width: 100% !important;
@@ -474,7 +460,6 @@ main {
 }
 
 @media (max-width: 375px) {
-  /*  ======================= HOME PAGE MOBILE ======================== */
   /* --- Hero-Home --- */
   .hero-home {
     padding-top: 52px;
