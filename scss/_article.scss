@@ -1,8 +1,6 @@
 @use "./config" as con;
 
 main {
-  // margin: 2rem 0; /* this will be removed */
-
   .main-article {
     // padding-bottom: 104.18px;
     padding: 24px 0 104.18px 0;
@@ -339,14 +337,123 @@ main {
       }
     }
   }
+
+  .more-articles {
+    border-top: 2px solid con.$primary-dark-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* eyes separator */
+    .eyes-container {
+      position: absolute;
+      display: flex;
+      width: 84px;
+      top: -34px;
+
+      .eyes {
+        .white-part {
+          position: relative;
+
+          .black-part {
+            position: absolute;
+            bottom: 7px;
+            right: 10.14px;
+          }
+        }
+      }
+
+      .right-eye {
+        position: relative;
+        right: 8px;
+      }
+
+      &::after {
+        content: "";
+        background-image: url("../img/article-page/smile-icon.png");
+        background-size: cover;
+        position: absolute;
+        top: calc(100% - 5px);
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        opacity: 0;
+      }
+
+      &:hover {
+        &::after {
+          transition: all 250ms linear;
+          opacity: 1;
+        }
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin: 84px auto 27px auto;
+    }
+
+    .articles-container {
+      width: fit-content;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      padding: 0 20px;
+
+      .article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 28px;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+
+          p {
+            font-family: "SF Pro Display", sans-serif;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 120%;
+            text-align: center;
+            max-width: 262px;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* ------------------------- ++ RESPONSIVE ++ -------------------------- */
-/* */
+@media (max-width: 1036px) {
+  main {
+    .more-articles {
+      .articles-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 676px) {
+  main {
+    .more-articles {
+      .articles-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
 @media (max-width: 640px) {
   main {
     .main-article {
-      /* Author Information*/
+      /* Author Information */
       &__author {
         padding: 0 20px;
         flex-direction: column;
@@ -406,6 +513,12 @@ main {
           h3 {
             margin-top: 10px;
             font-size: 26px;
+          }
+        }
+
+        .article-image-container {
+          &__image-info {
+            padding: 0 20px;
           }
         }
 
