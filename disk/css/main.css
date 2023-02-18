@@ -958,6 +958,11 @@ main .articles-section .articles-container .article {
   gap: 20px;
   margin-bottom: 28px;
   position: relative;
+  /* these 2 lines support hover effect on mobile screen */
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 main .articles-section .articles-container .article a {
   display: -webkit-box;

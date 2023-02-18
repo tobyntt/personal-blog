@@ -237,6 +237,10 @@ main {
         margin-bottom: 28px;
         position: relative;
 
+        /* these 2 lines support hover effect on mobile screen */
+        width: fit-content;
+        margin: 0 auto;
+
         a {
           display: flex;
           flex-direction: column;
@@ -455,6 +459,11 @@ main {
     width: 100% !important;
     .articles-container {
       grid-template-columns: 1fr !important;
+
+      // .article {
+      //   width: fit-content;
+      //   margin: 0 auto;
+      // }
 
       .article:nth-child(n + 7) {
         /* show only the first 6 articles on mobile mode */
