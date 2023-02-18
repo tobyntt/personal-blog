@@ -1,6 +1,7 @@
 @use "./config" as con;
 
 main {
+  /* Section 1: Main Articles*/
   .main-article {
     // padding-bottom: 104.18px;
     padding: 24px 0 104.18px 0;
@@ -338,6 +339,7 @@ main {
     }
   }
 
+  /* Section 2: More Articles */
   .more-articles {
     border-top: 2px solid con.$primary-dark-color;
     position: relative;
@@ -394,6 +396,7 @@ main {
       margin: 84px auto 27px auto;
     }
 
+    /* articles container */
     .articles-container {
       width: fit-content;
       margin: 0 auto;
@@ -427,6 +430,77 @@ main {
       }
     }
   }
+
+  /* Section 3: Sign Up Form*/
+  .sign-up-form {
+    border: 1px solid con.$primary-dark-color;
+    border-top: 12px solid con.$primary-dark-color;
+    max-width: con.$medium-max-width;
+    margin: 106px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 62px 60px;
+
+    h2 {
+      font-size: 36px;
+      line-height: 78%;
+      text-align: center;
+    }
+
+    p {
+      font-family: "SF Pro Text";
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 140%;
+      color: #4c4c4c;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 34px;
+    }
+
+    form {
+      width: 100%;
+      height: 54px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 70% 30%;
+
+      input {
+        padding: 15px 16px;
+
+        /* email input */
+        &:first-child {
+          font-family: "SF Pro Text";
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 24px;
+        }
+
+        /* submit button */
+        &:last-child {
+          background-color: con.$primary-dark-color;
+          color: con.$primary-white-color;
+          text-transform: uppercase;
+          font-family: "SF Pro Text";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+          letter-spacing: 0.05em;
+          cursor: pointer;
+
+          &:hover {
+            background-color: con.$primary-theme-color;
+            color: con.$primary-dark-color;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* ------------------------- ++ RESPONSIVE ++ -------------------------- */
@@ -445,6 +519,10 @@ main {
     .more-articles {
       .articles-container {
         grid-template-columns: 1fr;
+
+        .article:nth-child(n + 4) {
+          display: none;
+        }
       }
     }
   }
@@ -452,6 +530,7 @@ main {
 
 @media (max-width: 640px) {
   main {
+    /* Main Article */
     .main-article {
       /* Author Information */
       &__author {
@@ -569,6 +648,34 @@ main {
           p {
             text-align: center;
             font-size: 14px;
+          }
+        }
+      }
+    }
+
+    /* Main Article */
+    .sign-up-form {
+      padding: 42px 20px;
+      margin: 92px auto 52px auto;
+
+      h2 {
+        font-size: 29px;
+        line-height: 100%;
+        max-width: 248px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 15px;
+        max-width: 306px;
+      }
+
+      form {
+        input {
+          &:first-child,
+          &:last-child {
+            font-size: 16px;
+            line-height: 19px;
           }
         }
       }

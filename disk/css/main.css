@@ -1,3 +1,8 @@
+main {
+  /* Section 1: Main Articles*/
+  /* Section 2: More Articles */
+  /* Section 3: Sign Up Form*/
+}
 main .main-article {
   padding: 24px 0 104.18px 0;
   /* Author and Artitle's posted date */
@@ -371,6 +376,7 @@ main .more-articles {
       -ms-flex-align: center;
           align-items: center;
   /* eyes separator */
+  /* articles container */
 }
 main .more-articles .eyes-container {
   position: absolute;
@@ -459,6 +465,79 @@ main .more-articles .articles-container .article a p {
   text-align: center;
   max-width: 262px;
 }
+main .sign-up-form {
+  border: 1px solid #000000;
+  border-top: 12px solid #000000;
+  max-width: 640px;
+  margin: 106px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+  padding: 62px 60px;
+}
+main .sign-up-form h2 {
+  font-size: 36px;
+  line-height: 78%;
+  text-align: center;
+}
+main .sign-up-form p {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #4c4c4c;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 34px;
+}
+main .sign-up-form form {
+  width: 100%;
+  height: 54px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 30%;
+  grid-template-columns: 70% 30%;
+}
+main .sign-up-form form input {
+  padding: 15px 16px;
+  /* email input */
+  /* submit button */
+}
+main .sign-up-form form input:first-child {
+  font-family: "SF Pro Text";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+main .sign-up-form form input:last-child {
+  background-color: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+main .sign-up-form form input:last-child:hover {
+  background-color: rgb(246, 217, 2);
+  color: #000000;
+}
 
 /* ------------------------- ++ RESPONSIVE ++ -------------------------- */
 @media (max-width: 1036px) {
@@ -472,8 +551,15 @@ main .more-articles .articles-container .article a p {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
+  main .more-articles .articles-container .article:nth-child(n+4) {
+    display: none;
+  }
 }
 @media (max-width: 640px) {
+  main {
+    /* Main Article */
+    /* Main Article */
+  }
   main .main-article {
     /* Author Information */
     /* Article Content*/
@@ -578,6 +664,24 @@ main .more-articles .articles-container .article a p {
   main .main-article__author-background .name-background p {
     text-align: center;
     font-size: 14px;
+  }
+  main .sign-up-form {
+    padding: 42px 20px;
+    margin: 92px auto 52px auto;
+  }
+  main .sign-up-form h2 {
+    font-size: 29px;
+    line-height: 100%;
+    max-width: 248px;
+  }
+  main .sign-up-form p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    max-width: 306px;
+  }
+  main .sign-up-form form input:first-child, main .sign-up-form form input:last-child {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 /* --------------------------- ++ BASE ++ --------------------------- */
