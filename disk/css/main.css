@@ -677,7 +677,6 @@ main .sign-up-form form input:last-child:hover {
   main .sign-up-form p {
     font-size: 16px;
     margin-bottom: 15px;
-    max-width: 306px;
   }
   main .sign-up-form form input:first-child, main .sign-up-form form input:last-child {
     font-size: 16px;
